@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @types = ["Modern", "Old", "New", "Nice"]
+    @types = %w[Modern Old New Nice]
   end
 
   # GET /users/new

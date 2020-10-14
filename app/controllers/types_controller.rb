@@ -1,5 +1,5 @@
 class TypesController < ApplicationController
-  before_action :set_type, only: [:show, :edit, :update, :destroy]
+  before_action :set_type, only: %i[show edit update destroy]
 
   # GET /types
   # GET /types.json
@@ -9,8 +9,7 @@ class TypesController < ApplicationController
 
   # GET /types/1
   # GET /types/1.json
-  def show
-  end
+  def show; end
 
   # GET /types/new
   def new
@@ -18,8 +17,7 @@ class TypesController < ApplicationController
   end
 
   # GET /types/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /types
   # POST /types.json
@@ -62,13 +60,14 @@ class TypesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_type
-      @type = Type.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def type_params
-      params.require(:type).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_type
+    @type = Type.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def type_params
+    params.require(:type).permit(:name)
+  end
 end

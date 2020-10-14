@@ -1,1 +1,1 @@
-json.array! @types, partial: "types/type", as: :type
+json.array! @types, partial: 'types/type', as: :type
