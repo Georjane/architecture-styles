@@ -6,13 +6,10 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <strong><%= @user.name %></strong>
+        <strong></br><%= @user.name %></strong>
       </h1>
-      <h5>
-      <%= link_to 'Edit', edit_user_path(@user) %> |
-      <%= link_to 'Back', users_path %>
-      </h5>
     </section>
   </aside>
 </div>
+
 
