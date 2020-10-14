@@ -12,8 +12,6 @@
  *
  */
  
- @import "bootstrap-sprockets";
- @import "bootstrap";
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -29,6 +27,9 @@ $gray-medium-light: #eaeaea;
 /* universal */
 body {
   padding-top: 60px;
+}
+img {
+  width: 90%;
 }
 section {
   overflow: auto;
