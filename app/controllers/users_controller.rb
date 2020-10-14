@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @category =  if logged_in?
+    @types = ["Modern", "Old", "New", "Nice"]
   end
 
   # GET /users/new
