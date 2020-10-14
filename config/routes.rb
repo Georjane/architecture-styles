@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :types
   # get 'sessions/new'
   root 'users#new'
   get '/login', to: 'sessions#new'
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   
   get '/signup', to: 'users#new'
   resources :users
-  resources :microposts, only: [:create, :destroy]
+  resources :articles, only: [:create, :destroy]
+  resources :categories, only: [:new, :create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

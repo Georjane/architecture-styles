@@ -9,7 +9,9 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show; end
+  def show
+    @category =  if logged_in?
+  end
 
   # GET /users/new
   def new

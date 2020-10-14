@@ -20,4 +20,29 @@
   </div>
 </div>
 
+<% if logged_in? %>
+<div class="row">
+<aside class="col-md-4">
+<section class="user_info">
+<%= link_to gravatar_for(current_user, size: 50), current_user
+%>
+<h1><%= current_user.name %></h1>
+<span><%= link_to "view my profile", current_user %></span>
+<span><%= pluralize(current_user.microposts.count, "micropost")
+%></span>
+</section>
+<section class="micropost_form">
+<%= form_for(@micropost) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+<%= f.text_area :content, placeholder: "Compose new
+micropost..." %>
+</div>
+<%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
+  </section>
+</aside>
+</div>
+<% else %>
+
 
