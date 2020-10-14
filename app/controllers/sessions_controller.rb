@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:session][:name.downcase])
     if user.nil?
       # Create an error message.
-      flash.now[:danger] = 'Invalid username, please click on the logo and sign up'
-      render 'new'
+      flash[:danger] = 'Invalid username, please sign up'
+      redirect_to root_url
     else
       log_in(user)
       redirect_to user
@@ -15,5 +15,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
+    log_out
+    redirect_to root_url
   end
 end
