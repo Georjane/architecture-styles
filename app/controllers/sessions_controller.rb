@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
-  def new
-  end
-  
+  def new; end
+
   def create
     user = User.find_by(name: params[:session][:name.downcase])
     if user.nil?
@@ -13,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to user
     end
   end
-  
+
   def destroy
     log_out
     redirect_to root_url
