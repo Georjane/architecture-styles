@@ -20,6 +20,7 @@
   <%= @article.created_at %>
 </p>
 
+<p><%= image_tag @article.image.url %></p>
 
 <% pre_vote = @article.votes.find { |vote| vote.user_id == current_user.id} %>
 <% if pre_vote %>
