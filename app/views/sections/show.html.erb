@@ -1,0 +1,7 @@
+<h1><%= @section.name %></h1>
+<p>List of all articles under this section</p>
+<%= render partial: 'sections/article', collection: @section.articles %>
+<%= link_to "<< Back to sections List", sections_path %>
+<h3>Post an Article</h3>
+<p>(article form will go here)</p>
+<%= link_to 'New Article', new_article_path %>

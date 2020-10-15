@@ -1,0 +1,7 @@
+<div>
+  <h6>Article by 
+  <% author = User.find_by(id: article.user_id).name  %>
+  <%= author %></h>
+  <h3 class="article">Title: <%= article.title %></h3>
+  <p class="article"><%= article.body %></p>
+</div>
