@@ -6,9 +6,10 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Body</th>
+      <!--<th>Body</th>-->
       <th>Author</th>
       <th>Created at</th>
+      <th>Votes</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -17,9 +18,10 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.body %></td>
+        <%#= article.body %>
         <td><%= article.user.name %></td>
         <td><%= article.created_at %></td>
+        <td><%= article.votes.count %></td>
         <td><%= link_to 'Show', article %></td>
         <% if current_user == article.user %>
           <td><%= link_to 'Edit', edit_article_path(article) %></td>

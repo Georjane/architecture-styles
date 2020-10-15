@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
@@ -22,10 +20,8 @@
 
 <p>
       <% if @article.image.exists? %>
-          <%= image_tag @article.image.url %><br/>
+          <%= image_tag @article.image.url, height: '50%', width: '50%' %><br/>
       <% end %>
-      <%= f.label :image, "Attach a New Image" %><br />
-      <%= f.file_field :image %>
 </p>
 
 <% pre_vote = @article.votes.find { |vote| vote.user_id == current_user.id} %>

@@ -2,13 +2,18 @@
 <div class = "container big">
   <div class = "row">
     <div class = "col-md-8 red">
-      <p>Jane</p>
-       <% mainimage = Article.all.votes.max %>
-       <%= image_tag mainimage.url, height: '100%', width: '100%' %>
-      
+      <% hash = {} %>
+       <% Article.all.each do |art|  %>
+       <% hash[art] = art.votes.count  %>
+       <%  end %>
+        <% num = hash.key(hash.values.max) %>
+        <% mainimage = num.image %>
+        <%= image_tag mainimage.url, height: '100%', width: '100%' %>
+        <p><%= link_to num.title, '#' %> was voted highest with <%= num.votes.count %> votes</p>
+        
     </div>
     <div class = "col-md-4 blue">
-      <p>john</p>
+      <p>Architecture</p>
     </div>
   </div>
   
