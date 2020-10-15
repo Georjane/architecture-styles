@@ -20,7 +20,13 @@
   <%= @article.created_at %>
 </p>
 
-<p><%= image_tag @article.image.url %></p>
+<p>
+      <% if @article.image.exists? %>
+          <%= image_tag @article.image.url %><br/>
+      <% end %>
+      <%= f.label :image, "Attach a New Image" %><br />
+      <%= f.file_field :image %>
+</p>
 
 <% pre_vote = @article.votes.find { |vote| vote.user_id == current_user.id} %>
 <% if pre_vote %>
