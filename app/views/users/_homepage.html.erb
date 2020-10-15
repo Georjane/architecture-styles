@@ -9,10 +9,11 @@
       <p>john</p>
     </div>
   </div>
+  
   <div class = "row">
-     <% @types.each do |type| %>
+     <% @sections.each do |section| %>
     <div class = "col-md-3 yellow">
-      <%= type %>
+     <h3> <%= link_to section.name, section_path(section) %></h3>
     </div>
     <% end %>
   </div> 

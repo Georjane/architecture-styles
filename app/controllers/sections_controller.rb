@@ -20,6 +20,15 @@ class SectionsController < ApplicationController
     # this is the path we will use wen we click on a category
   end
   
+    def destroy
+      @section = Section.find(params[:id])
+      @section.destroy
+      respond_to do |format|
+        format.html { redirect_to sections_url, notice: 'section was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    end
+  
   private
   def section_params
     params.require(:section).permit(:name)

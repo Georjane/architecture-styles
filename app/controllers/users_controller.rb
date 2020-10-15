@@ -5,12 +5,13 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    @types = %w[Modern Old New Nice]
+    @sections = Section.all
   end
 
   # GET /users/new

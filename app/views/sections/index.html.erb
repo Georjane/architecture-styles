@@ -4,6 +4,7 @@
   <% @sections.each do |section| %>
     <li>
       <%= link_to section.name, section_path(section) %>
+      <%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
   <% end %>
 </ul>

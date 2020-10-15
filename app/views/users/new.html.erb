@@ -2,10 +2,14 @@
 
 <div class="center jumbotron">
   <h1>Welcome to Modern Architecture Styles</h1>
-  <h2>Are you a New User? Please Sign Up Below</h2>
+  <% if logged_in? %>
+    <p>Welcome back, choose a category below to view articles and even create yours</p>
+  <% else %>
+    <h2>Are you a New User? Please Sign Up Below</h2>
   <%#= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
-  <%= render 'form', user: @user %>
+    <%= render 'form', user: @user %>
   <%#= link_to 'Back', users_path %>
+  <% end %>
   <%= link_to image_tag("pic.jpg", alt: "Rails logo") %>
 </div>
 
