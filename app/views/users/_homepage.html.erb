@@ -1,0 +1,20 @@
+ 
+<div class = "container big">
+  <div class = "row">
+    <div class = "col-md-8 red">
+      <p>Jane</p>
+      
+    </div>
+    <div class = "col-md-4 blue">
+      <p>john</p>
+    </div>
+  </div>
+  <div class = "row">
+     <% @types.each do |type| %>
+    <div class = "col-md-3 yellow">
+      <%= type %>
+    </div>
+    <% end %>
+  </div> 
+</div>
+
