@@ -34,7 +34,8 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update article' do
-    patch article_url(@article), params: { article: { body: @article.body, title: @article.title, user_id: @article.user_id } }
+    patch article_url(@article), params: { article:
+      { body: @article.body, title: @article.title, user_id: @article.user_id } }
     assert_redirected_to article_url(@article)
   end
 
