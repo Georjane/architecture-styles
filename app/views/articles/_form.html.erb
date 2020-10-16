@@ -1,3 +1,4 @@
+<div class= "article-form">
 <%= form_with(model: article, local: true, html: {multipart: true}) do |form| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
@@ -21,9 +22,7 @@
     <%= form.text_area :body %>
   </div>
 
-  <div class="field">
-    <%#= form.label :section_id %>
-    <%#= form.text_field :section_id %>
+  <div class="field radios">
     <%= form.radio_button :section_id, Section.find_by(name: 'Section 1').id %> 
     <%= form.label :section_id, 'Section 1' %>
     <%= form.radio_button :section_id, Section.find_by(name: 'Section 2').id %>
@@ -44,3 +43,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>

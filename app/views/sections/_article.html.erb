@@ -1,24 +1,21 @@
-<div>
-  <h6>Article by 
-  <% author = User.find_by(id: article.user_id).name  %>
-  <%= author %></h>
-  <h3 class="article">Title: <%= article.title %></h3>
-  <% pre_vote = article.votes.find { |vote| vote.user_id == current_user.id} %>
-<% if pre_vote %>
-  <%= button_to 'Unvote', article_vote_path(article, pre_vote), method: :delete %>
-<% else %>
-  <%= button_to 'vote', article_votes_path(article), method: :post %>
-<% end %>
-
-<p><%= article.votes.count %> <%= (article.votes.count) == 1 ? 'vote' : 'votes'%></p>
-
-  <p class="article"><%= article.body %></p>
-  
-  <p>
-  <strong>Created at:</strong>
-  <%= article.created_at %>
-</p>
-
-          <%= image_tag article.image.url, height: '50%', width: '50%' %><br/>
-      
+<div class = "col-lg-6">
+  <div id="dist">
+    <div class="row">
+      <div class="col-lg-6 text-justify leftcol size" id="description">
+        <h4 id="yellow" ><strong><%= article.title %></h4></strong>
+        <h5><em>by <%= article.user.name %></em></h5>
+        <p class="ellipsis"><%= article.body %></p>
+        
+        <% pre_vote = article.votes.find { |vote| vote.user_id == current_user.id} %>
+        <% if pre_vote %>
+          <%= button_to 'Unvote', article_vote_path(article, pre_vote), method: :delete %>
+        <% else %>
+          <%= button_to 'vote', article_votes_path(article), method: :post %>
+        <% end %>
+        
+        <p class="float-right">(<%= article.votes.count %> <%= (article.votes.count) == 1 ? 'vote' : 'votes'%>)</p>
+      </div>
+      <div class="col-lg-6 rightcol"><%= image_tag article.image.url, height: '100%', width: '100%' %></div>
+    </div>
+  </div>
 </div>

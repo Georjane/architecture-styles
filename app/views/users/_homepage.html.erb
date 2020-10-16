@@ -1,28 +1,33 @@
  
-<div class = "container big">
-  <div class = "row">
-    <div class = "col-md-8 red">
+<div class = " big">
+  <div class = "row row-no-gutters">
+    <div class = "col-lg-8 red">
       <% hash = {} %>
-       <% Article.all.each do |art|  %>
-       <% hash[art] = art.votes.count  %>
-       <%  end %>
-        <% num = hash.key(hash.values.max) %>
-        <% mainimage = num.image %>
-        <%= image_tag mainimage.url, height: '100%', width: '100%' %>
-        <p><%= link_to num.title, '#' %> was voted highest with <%= num.votes.count %> votes</p>
-        
+      <% Article.all.each do |art|  %>
+        <% hash[art] = art.votes.count  %>
+      <%  end %>
+      <% num = hash.key(hash.values.max) %>
+      <% mainimage = num.image %>
+      <%= image_tag mainimage.url, height: '100%', width: '100%' %>
+      <div class="position-absolute">
+        <p><span><%= link_to num.title, num %></span> was voted highest with <%= num.votes.count %> votes</p>
+      </div>
     </div>
-    <div class = "col-md-4 blue">
-      <p>Architecture</p>
+    
+    <div class = "col-lg-4 blue">
+      <%= image_tag Article.last.image.url, height: '100%', width: '100%' %>
     </div>
   </div>
   
-  <div class = "row">
+  <div class = "row row-no-gutters">
      <% @sections.each do |section| %>
     <div class = "col-md-3 yellow">
-       <h3> <%= link_to section.name, section_path(section) %></h3>
+       
        <% myimage = section.articles.last.image %>
        <%= image_tag myimage.url, height: '100%', width: '100%' %>
+       <div class="position-absolute">
+         <h3> <%= link_to section.name, section_path(section) %></h3>
+       </div>
     </div>
     <% end %>
   </div> 
