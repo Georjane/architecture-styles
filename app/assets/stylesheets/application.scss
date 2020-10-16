@@ -280,15 +280,19 @@ input {
   .field label{
     font-size: 1.4em;
   }
-  .field input{
+  form {
+    width: 700px;
+    background-color: #e2e2e2;
+    padding: 35px;
   }
 }
 
-form {
-  width: 700px;
-  background-color: #e2e2e2;
-  padding: 200px;
-}
+
 .radios {
- padding-left: 50px;
+ padding-left: 200px;
+ padding-bottom: 20px;
+}
+#myarticle-title {
+  // padding: 5px;
+  margin: 5px;
 }
