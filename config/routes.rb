@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  # get 'votes/create'
-  # get 'votes/destroy'
-  # resources :types
-  # get 'sessions/new'
   root 'users#new'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -14,5 +10,4 @@ Rails.application.routes.draw do
     resources :votes
   end
   resources :sections
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

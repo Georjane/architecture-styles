@@ -3,21 +3,13 @@ class VotesController < ApplicationController
   before_action :find_vote, only: [:destroy]
 
   def create
-    if already_voted?
-      flash[:notice] = "You can't vote more than once"
-    else
-      @vote = current_user.votes.create(article_id: params[:article_id])
-    end
-    redirect_to articles_path, notice: 'You voted article.'
+    @vote = current_user.votes.create(article_id: params[:article_id]) unless already_voted?
+    redirect_to @article, notice: 'You voted this article.'
   end
 
   def destroy
-    if !already_voted?
-      flash[:notice] = 'Cannot unlike'
-    else
-      @vote.destroy
-    end
-    redirect_to articles_path, notice: 'You unvoted an article.'
+    @vote.destroy if already_voted?
+    redirect_to @article, notice: 'You unvoted this article.'
   end
 
   private
