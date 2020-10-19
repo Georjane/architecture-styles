@@ -3,8 +3,7 @@
     <% count = 1 %>
     <% @section.articles.ordered_by_most_recent.each do |article| %>
     <% if count < 3  %>
-      <div class = "col-lg-6 middle">
-        <div id="dist">
+      <div class = "col-lg-6">
           <div class="row">
             <div class="col-lg-6 rightcol"><%= image_tag article.image.url, height: '100%', width: '100%' %></div>
             <div class="col-lg-6 text-justify leftcol size" id="description">
@@ -25,15 +24,12 @@
             </div>
             
           </div>
-        </div>
       </div>
       <% count += 1 %>
       <% else %>
       
-          <div class = "col-lg-6 middle">
-        <div id="dist">
-          <div class="row">
-            
+      <div class = "col-lg-6">
+        <div class="row">
             <div class="col-lg-6 text-justify leftcol size" id="description">
               <h4 id="yellow" ><strong><%= @section.name %></h4></strong>
               <h4><strong><%= article.title %></h4></strong>
@@ -51,11 +47,10 @@
             </div>
             <div class="col-lg-6 rightcol"><%= image_tag article.image.url, height: '100%', width: '100%' %></div>
           </div>
-        </div>
+        
       </div>
       <% count += 1 %>
       <% end %>
     <% end %>
   </div>
 </div>
-<%#= link_to "<< Back to sections List", current_user %>

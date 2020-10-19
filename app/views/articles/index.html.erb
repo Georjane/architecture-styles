@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Title</th>
-      <!--<th>Body</th>-->
       <th>Author</th>
       <th>Created at</th>
       <th>Votes</th>
@@ -18,7 +17,6 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <%#= article.body %>
         <td><%= article.user.name %></td>
         <td><%= article.created_at %></td>
         <td><%= article.votes.count %></td>
