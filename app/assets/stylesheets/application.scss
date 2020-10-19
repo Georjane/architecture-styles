@@ -21,8 +21,8 @@
   box-sizing: border-box;
 }
 
-$brown: #4D423C;
-$orange: #F66537;
+$brown: #4d423c;
+$orange: #f66537;
 
 html {
   max-width: 1200px;
@@ -40,6 +40,7 @@ body {
 section {
   overflow: auto;
 }
+
 textarea {
   resize: vertical;
 }
@@ -52,18 +53,12 @@ h5,
 h6 {
   line-height: 1;
 }
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
 }
 
 h2 {
@@ -88,11 +83,6 @@ p {
   border-bottom: 3px solid gray;
   padding: 3px 7px;
   margin-bottom: 0;
-}
-
-#links a:hover {
-  color: $orange;
-  text-decoration: none;
 }
 
 #logo {
@@ -140,6 +130,23 @@ footer {
   }
 }
 
+.position-absolute p {
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px;
+  span a {
+    color: $orange;
+    font-weight: bold;
+  }
+}
+
+#links a:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
 aside {
   section.user_info {
     margin-top: 20px;
@@ -157,12 +164,19 @@ aside {
       line-height: 1;
     }
     h1 {
-    font-size: 1.4em;
-    text-align: left;
-    letter-spacing: -1px;
-    margin-bottom: 3px;
-    margin-top: 0px;
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top:0;
     }
+  }
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
   }
 }
 
@@ -175,7 +189,10 @@ aside {
   margin-top: 15px;
 }
 
-input, textarea, select, .uneditable-input {
+input,
+textarea,
+select,
+.uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
@@ -201,7 +218,8 @@ input {
   }
 }
 
-.green, .yellow {
+.green,
+.yellow {
   height: 200px;
 }
 
@@ -217,35 +235,24 @@ input {
 
 .row-no-gutters {
   padding: 0;
-  margin: 0px !important; 
+  margin:0 !important; 
 }
 
-.position-absolute h3 a{
+.position-absolute h3 a {
   font-weight: bolder;
   position: absolute;
   bottom: 130px;
   color: white;
   text-decoration: underline;
-  text-decoration-color: #F8A745;
+  text-decoration-color: #f8a745;
   padding: 10px;
-}
-
-.position-absolute p {
-  position: absolute;
-  bottom: 30px;
-  color: white;
-  font-size: 1.5em;
-  padding: 10px;
-  span a {
-    color: $orange;
-    font-weight: bold;
-  }
 }
 
 #description {
   padding: 25px;
 }
-.leftcol, .rightcol {
+.leftcol,
+.rightcol {
   width: 24vw;
   height: 25vw;
 }
@@ -259,7 +266,7 @@ input {
 }
 
 #yellow {
-  color: #F8A745;
+  color: #f8a745;
   text-decoration: underline;
   text-decoration-color: $orange;
   padding-bottom: 2px;
@@ -282,7 +289,7 @@ input {
   justify-content: center;
   background-color: $brown;
   border-radius: 10px;
-  .field label{
+  .field label {
     font-size: 1.4em;
   }
   form {
@@ -291,7 +298,8 @@ input {
     border-radius: 10px 0 0 10px;
   }
 }
-i{
+
+i {
   color: $orange;
   &:hover {
     color: white;
@@ -313,7 +321,7 @@ i{
  width: 47vw;
 }
 
-#category .row{
+#category .row {
   padding: 0;
 }
 
@@ -327,7 +335,8 @@ i{
   align-items: center;
 }
 
-.flexright, .flexright {
+.flexright,
+.flexleft {
   width: 50%;
 }
 
