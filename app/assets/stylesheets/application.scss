@@ -11,7 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  */
- 
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -22,34 +21,35 @@
   box-sizing: border-box;
 }
 
-/* mixins, variables, etc. */
-$gray-medium-light: #eaeaea;
-/* universal */
+$brown: #4D423C;
+$orange: #F66537;
+
 html {
   max-width: 1200px;
 }
+
 body {
   padding: 0;
   margin: 0;
-  // background-color: #4D423C;
 }
+
 .jumbotron img {
   width: 90%;
 }
+
 section {
   overflow: auto;
 }
 textarea {
   resize: vertical;
 }
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-/* typography */
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1;
 }
 h1 {
@@ -58,6 +58,14 @@ h1 {
   margin-bottom: 30px;
   text-align: center;
 }
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
@@ -66,12 +74,13 @@ h2 {
   font-weight: normal;
   color: $gray-light;
 }
+
 p {
   font-size: 1.1em;
   line-height: 1.5em;
   margin-bottom: 0;
 }
-/* header */
+
 #header {
   background-color: white;
   border-radius: 0;
@@ -80,29 +89,32 @@ p {
   padding: 3px 7px;
   margin-bottom: 0;
 }
+
 #links a:hover {
-  color: #F66537;
+  color: $orange;
   text-decoration: none;
 }
+
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #4D423C;
+  color: $brown;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: #F66537;
+    color: $orange;
     text-decoration: none;
   }
 }
-/* footer */
+
 #footer {
-  background-color: #4D423C;
+  background-color: $brown;
   height: 40px;
 }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -114,7 +126,7 @@ footer {
   a {
     color: white;
     &:hover {
-      color: #F66537;
+      color: $orange;
       text-decoration: none;
     }
   }
@@ -128,16 +140,6 @@ footer {
   }
 }
 
-/* miscellaneous */
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
-/* sidebar */
 aside {
   section.user_info {
     margin-top: 20px;
@@ -173,7 +175,6 @@ aside {
   margin-top: 15px;
 }
 
-/* forms */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -200,7 +201,6 @@ input {
   }
 }
 
-
 .green, .yellow {
   height: 200px;
 }
@@ -209,16 +209,17 @@ input {
   height: 500px;
 }
 
-
 #all-articles-con {
   padding: 0;
   margin: 0;
-  border: 10px solid #4D423C;
+  border: 10px solid $brown;
 }
+
 .row-no-gutters {
   padding: 0;
   margin: 0px !important; 
 }
+
 .position-absolute h3 a{
   font-weight: bolder;
   position: absolute;
@@ -236,10 +237,11 @@ input {
   font-size: 1.5em;
   padding: 10px;
   span a {
-    color: #F66537;
+    color: $orange;
     font-weight: bold;
   }
 }
+
 #description {
   padding: 25px;
 }
@@ -247,6 +249,7 @@ input {
   width: 24vw;
   height: 25vw;
 }
+
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -258,9 +261,10 @@ input {
 #yellow {
   color: #F8A745;
   text-decoration: underline;
-  text-decoration-color: #F66537;
+  text-decoration-color: $orange;
   padding-bottom: 2px;
 }
+
 .size .button_to {
   margin-top: 10px;
   margin-bottom: 0;
@@ -276,7 +280,7 @@ input {
 .article-form {
   display: flex;
   justify-content: center;
-  background-color: #4D423C;
+  background-color: $brown;
   border-radius: 10px;
   .field label{
     font-size: 1.4em;
@@ -288,37 +292,41 @@ input {
   }
 }
 i{
-  color: #F66537;
+  color: $orange;
   &:hover {
     color: white;
   }
 }
 
-
 .radios {
  padding: 20px;
  margin: 0;
 }
+
 #myarticle-title {
   margin: 0;
-  color: #F66537;
-  background-color: #4D423C;
+  color: $orange;
+  background-color: $brown;
 }
+
 .middle {
  width: 47vw;
 }
+
 #category .row{
   padding: 0;
 }
+
 .flexdiv {
   width: 80%;
   height: 80%;
   border-radius: 10px;
-  background-color: #4D423C;
+  background-color: $brown;
   margin: 20px auto;
   display: flex;
   align-items: center;
 }
+
 .flexright, .flexright {
   width: 50%;
 }
