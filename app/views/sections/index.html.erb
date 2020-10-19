@@ -1,0 +1,12 @@
+<h1>All Sections</h1>
+
+<ul id="sections">
+  <% @sections.each do |section| %>
+    <li>
+      <%= link_to section.name, section_path(section) %>
+      <%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New section", new_section_path, class: "new_section" %>

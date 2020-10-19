@@ -1,0 +1,16 @@
+<!--<h1>New User</h1>-->
+
+<div class="center jumbotron">
+  <h1>Welcome to Modern Architecture Styles</h1>
+  <% if logged_in? %>
+    <p>Welcome back, choose a category below to view articles and even create yours</p>
+  <% else %>
+    <h2>Are you a New User? Please Sign Up Below</h2>
+  <%#= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+    <%= render 'form', user: @user %>
+  <%#= link_to 'Back', users_path %>
+  <% end %>
+  <%#= link_to image_tag("landpage.jpg", alt: "Landing page image") %>
+  <%= link_to image_tag("example-scene-2.svg", alt: "Landing page image") %>
+</div>
+

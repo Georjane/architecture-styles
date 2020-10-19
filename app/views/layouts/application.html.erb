@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ArchitectureStyles</title>
+    <title>Architecture Styles</title>
+    <title><%#= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <div class="container-fluid" id = "all-articles-con">
+    <%= render 'layouts/header' %>
+    <body>
+        <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+        <% end %>
+        <%= yield %>
+    </body>
+    <%= render 'layouts/footer' %>
+  </div>
 </html>

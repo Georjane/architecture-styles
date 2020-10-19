@@ -1,0 +1,31 @@
+ 
+<div class = " big">
+  <div class = "row row-no-gutters">
+    <div class = "col-lg-12 red">
+      <% hash = {} %>
+      <% Article.all.each do |art|  %>
+        <% hash[art] = art.votes.count  %>
+      <%  end %>
+      <% num = hash.key(hash.values.max) %>
+      <% mainimage = num.image %>
+      <%= image_tag mainimage.url, height: '100%', width: '100%' %>
+      <div class="position-absolute">
+        <p><span><%= link_to num.title, num %></span> was voted highest with <%= num.votes.count %> votes</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class = "row row-no-gutters">
+     <% @sections.each do |section| %>
+    <div class = "col-md-3 yellow">
+       
+       <% myimage = section.articles.last.image %>
+       <%= image_tag myimage.url, height: '100%', width: '100%' %>
+       <div class="position-absolute">
+         <h3> <%= link_to section.name, section_path(section) %></h3>
+       </div>
+    </div>
+    <% end %>
+  </div> 
+</div>
+

@@ -1,0 +1,366 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$brown: #4d423c;
+$orange: #f66537;
+
+html {
+  max-width: 1200px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.jumbotron img {
+  width: 90%;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+#header {
+  background-color: white;
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid gray;
+  padding: 3px 7px;
+  margin-bottom: 0;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: $brown;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+
+  &:hover {
+    color: $orange;
+    text-decoration: none;
+  }
+}
+
+#footer {
+  background-color: $brown;
+  height: 40px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 5px;
+  padding-bottom: 0;
+  color: white;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: $orange;
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+.position-absolute h3 a {
+  font-weight: bolder;
+  position: absolute;
+  bottom: 130px;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #f8a745;
+  padding: 10px;
+}
+
+.position-absolute p {
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px;
+
+  span a {
+    color: $orange;
+    font-weight: bold;
+  }
+}
+
+#links a:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0;
+    }
+  }
+}
+
+.center {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.green,
+.yellow {
+  height: 200px;
+}
+
+.red {
+  height: 500px;
+}
+
+#all-articles-con {
+  padding: 0;
+  margin: 0;
+  border: 10px solid $brown;
+}
+
+.row-no-gutters {
+  padding: 0;
+  margin: 0 !important;
+}
+
+#description {
+  padding: 25px;
+}
+
+.leftcol,
+.rightcol {
+  width: 24vw;
+  height: 25vw;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+#yellow {
+  color: #f8a745;
+  text-decoration: underline;
+  text-decoration-color: $orange;
+  padding-bottom: 2px;
+}
+
+.size .button_to {
+  margin-top: 10px;
+  margin-bottom: 0;
+  width: 25%;
+  float: right;
+}
+
+.float-right {
+  float: left;
+  margin-top: 10px;
+}
+
+.article-form {
+  display: flex;
+  justify-content: center;
+  background-color: $brown;
+  border-radius: 10px;
+
+  .field label {
+    font-size: 1.4em;
+  }
+
+  form {
+    background-color: #c4b3ac;
+    padding: 35px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+i {
+  color: $orange;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.radios {
+  padding: 20px;
+  margin: 0;
+}
+
+#myarticle-title {
+  margin: 0;
+  color: $orange;
+  background-color: $brown;
+}
+
+.middle {
+  width: 47vw;
+}
+
+#category .row {
+  padding: 0;
+}
+
+.flexdiv {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: $brown;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.flexright,
+.flexleft {
+  width: 50%;
+}
+
+.logimage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

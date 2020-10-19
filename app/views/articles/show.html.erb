@@ -1,0 +1,35 @@
+
+  
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10"><h3><strong>Title:</strong><%= @article.title %></h3></div>
+    <div class="col-lg-2">
+      
+          <% if current_user == @article.user %>
+            <%= link_to 'Edit article', edit_article_path(@article) %> |
+          <% end %>
+          <%= link_to 'All Articles', articles_path %>
+    </div>
+    
+
+  </div>
+  <div class="row">
+    <div class="col-md-6"><% if @article.image.exists? %>
+          <%= image_tag @article.image.url, height: '100%', width: '100%' %><br/>
+      <% end %></div>
+     
+     <div class="col-md-6">
+       <h4><%= @article.user.name %> <small><em>Posted at <%= @article.created_at %></em></small></h4>
+       <%= @article.body %>
+       <div class= "size" >
+       <% pre_vote = @article.votes.find { |vote| vote.user_id == current_user.id} %>
+        <% if pre_vote %>
+          <%= button_to 'Unvote', article_vote_path(@article, pre_vote), method: :delete %>
+        <% else %>
+          <%= button_to 'vote', article_votes_path(@article), method: :post %>
+        <% end %>
+        <p class="float-right">(<%= @article.votes.count %> <%= (@article.votes.count) == 1 ? 'vote' : 'votes'%>)</p>
+       </div>
+     </div>
+  </div>
+</div>
