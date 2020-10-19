@@ -1,5 +1,5 @@
 class User < ApplicationRecord
+  validates :name, presence: true, length: { maximum: 25 }
   has_many :articles, dependent: :destroy
-  validates :name, presence: true, length: { maximum: 50 }
   has_many :votes, dependent: :destroy
 end
