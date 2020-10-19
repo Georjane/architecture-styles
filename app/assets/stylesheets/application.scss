@@ -94,6 +94,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+
   &:hover {
     color: $orange;
     text-decoration: none;
@@ -113,21 +114,35 @@ footer {
   padding: 5px;
   padding-bottom: 0;
   color: white;
+
   a {
     color: white;
+
     &:hover {
       color: $orange;
       text-decoration: none;
     }
   }
+
   ul {
     display: flex;
     list-style: none;
+
     li {
       float: left;
       margin-left: 15px;
     }
   }
+}
+
+.position-absolute h3 a {
+  font-weight: bolder;
+  position: absolute;
+  bottom: 130px;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #f8a745;
+  padding: 10px;
 }
 
 .position-absolute p {
@@ -136,6 +151,7 @@ footer {
   color: white;
   font-size: 1.5em;
   padding: 10px;
+
   span a {
     color: $orange;
     font-weight: bold;
@@ -148,33 +164,39 @@ footer {
 }
 
 aside {
+
   section.user_info {
     margin-top: 20px;
   }
+
   section {
     padding: 10px 0;
     margin-top: 20px;
+
     &:first-child {
       border: 0;
       padding-top: 0;
     }
+
     span {
       display: block;
       margin-bottom: 3px;
       line-height: 1;
     }
+
     h1 {
       font-size: 1.4em;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
-      margin-top:0;
+      margin-top: 0;
     }
   }
 }
 
 .center {
   text-align: center;
+
   h1 {
     margin-bottom: 10px;
   }
@@ -205,14 +227,16 @@ input {
 
 #error_explanation {
   color: red;
+
   ul {
     color: red;
     margin: 0 0 30px 0;
-    }
+  }
 }
 
 .field_with_errors {
   @extend .has-error;
+
   .form-control {
     color: $state-danger-text;
   }
@@ -223,7 +247,7 @@ input {
   height: 200px;
 }
 
-.red{
+.red {
   height: 500px;
 }
 
@@ -235,22 +259,14 @@ input {
 
 .row-no-gutters {
   padding: 0;
-  margin:0 !important; 
-}
+  margin: 0 !important;
 
-.position-absolute h3 a {
-  font-weight: bolder;
-  position: absolute;
-  bottom: 130px;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: #f8a745;
-  padding: 10px;
 }
 
 #description {
   padding: 25px;
 }
+
 .leftcol,
 .rightcol {
   width: 24vw;
@@ -289,9 +305,11 @@ input {
   justify-content: center;
   background-color: $brown;
   border-radius: 10px;
+
   .field label {
     font-size: 1.4em;
   }
+
   form {
     background-color: #c4b3ac;
     padding: 35px;
@@ -301,6 +319,7 @@ input {
 
 i {
   color: $orange;
+
   &:hover {
     color: white;
   }
@@ -318,7 +337,7 @@ i {
 }
 
 .middle {
- width: 47vw;
+  width: 47vw;
 }
 
 #category .row {
