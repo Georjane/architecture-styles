@@ -164,7 +164,6 @@ footer {
 }
 
 aside {
-
   section.user_info {
     margin-top: 20px;
   }
@@ -218,6 +217,7 @@ select,
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
+
   @include box_sizing;
 }
 
@@ -260,7 +260,6 @@ input {
 .row-no-gutters {
   padding: 0;
   margin: 0 !important;
-
 }
 
 #description {
@@ -326,8 +325,8 @@ i {
 }
 
 .radios {
- padding: 20px;
- margin: 0;
+  padding: 20px;
+  margin: 0;
 }
 
 #myarticle-title {
