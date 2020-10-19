@@ -19,7 +19,7 @@
       <% end %></div>
      
      <div class="col-md-6">
-       <h4><%= @article.user.name %> <small><i>Posted at <%= @article.created_at %></i></small></h4>
+       <h4><%= @article.user.name %> <small><em>Posted at <%= @article.created_at %></em></small></h4>
        <%= @article.body %>
        <div class= "size" >
        <% pre_vote = @article.votes.find { |vote| vote.user_id == current_user.id} %>

@@ -201,11 +201,11 @@ input {
 }
 
 
-.red, .blue, .green, .yellow {
+.green, .yellow {
   height: 200px;
 }
 
-.red, .blue{
+.red{
   height: 500px;
 }
 
@@ -277,22 +277,55 @@ input {
   display: flex;
   justify-content: center;
   background-color: #4D423C;
+  border-radius: 10px;
   .field label{
     font-size: 1.4em;
   }
   form {
-    width: 700px;
-    background-color: #e2e2e2;
+    background-color: #c4b3ac;
     padding: 35px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+i{
+  color: #F66537;
+  &:hover {
+    color: white;
   }
 }
 
 
 .radios {
- padding-left: 200px;
- padding-bottom: 20px;
+ padding: 20px;
+ margin: 0;
 }
 #myarticle-title {
-  // padding: 5px;
-  margin: 5px;
+  margin: 0;
+  color: #F66537;
+  background-color: #4D423C;
+}
+.middle {
+ width: 47vw;
+}
+#category .row{
+  padding: 0;
+}
+.flexdiv {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: #4D423C;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+.flexright, .flexright {
+  width: 50%;
+}
+
+.logimage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,7 +1,7 @@
  
 <div class = " big">
   <div class = "row row-no-gutters">
-    <div class = "col-lg-8 red">
+    <div class = "col-lg-12 red">
       <% hash = {} %>
       <% Article.all.each do |art|  %>
         <% hash[art] = art.votes.count  %>
@@ -12,10 +12,6 @@
       <div class="position-absolute">
         <p><span><%= link_to num.title, num %></span> was voted highest with <%= num.votes.count %> votes</p>
       </div>
-    </div>
-    
-    <div class = "col-lg-4 blue">
-      <%= image_tag Article.last.image.url, height: '100%', width: '100%' %>
     </div>
   </div>
   
