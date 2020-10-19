@@ -25,14 +25,18 @@
   
     <div class="field radios">
       <p>Choose a Section for your article</p>
-      <%= form.radio_button :section_id, Section.find_by(name: 'Section 1').id %> 
-      <%= form.label :section_id, 'Section 1' %>
-      <%= form.radio_button :section_id, Section.find_by(name: 'Section 2').id %>
-      <%= form.label :section_id, 'Section 2' %>
-      <%= form.radio_button :section_id, Section.find_by(name: 'Section 3').id %> 
-      <%= form.label :section_id, 'Section 3' %>
-      <%= form.radio_button :section_id, Section.find_by(name: 'Section 4').id %>
-      <%= form.label :section_id, 'Section 4' %>
+      <% Section.all.each do |section| %>
+        <%= form.radio_button :section_id, section.id %> 
+        <%= form.label :section_id, section.name %>
+      <% end %>
+      <%#= form.radio_button :section_id, Section.find_by(name: 'Section 1').id %> 
+      <%#= form.label :section_id, 'Section 1' %>
+      <%#= form.radio_button :section_id, Section.find_by(name: 'Section 2').id %>
+      <%#= form.label :section_id, 'Section 2' %>
+      <%#= form.radio_button :section_id, Section.find_by(name: 'Section 3').id %> 
+      <%#= form.label :section_id, 'Section 3' %>
+      <%#= form.radio_button :section_id, Section.find_by(name: 'Section 4').id %>
+      <%#= form.label :section_id, 'Section 4' %>
     </div>
     <div class="field">  
       <p>

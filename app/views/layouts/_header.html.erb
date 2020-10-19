@@ -8,6 +8,7 @@
             <% if logged_in? %>
             <li><%= link_to "Home", current_user %></li>
             <li><%= link_to "Write an Article", new_article_path %></li>
+           <li><%= link_to "Create New Category", new_section_path, class: "new_section" %></li>
               <li><%= link_to current_user.name, current_user %></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>

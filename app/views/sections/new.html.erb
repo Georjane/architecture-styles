@@ -1,16 +1,24 @@
 <h1>Create a New section</h1>
 
-<%= form_for(@section) do |f| %>
-  <ul>
-  <% @section.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-  </ul>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+
+<div class="row  logimage">
+  <div class="col-md-6">
+    <%= form_for(@section) do |f| %>
+      <ul>
+      <% @section.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+      </ul>
+      <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <%= link_to image_tag("wfh_1.svg", alt: "Remote working image") %>
+  </div>
+</div>

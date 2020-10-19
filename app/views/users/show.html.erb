@@ -1,6 +1,6 @@
-<% if Articles.all.empty? %>
-  <h3>PLease create a New Section</h3>
-  <%= link_to "Create a New section", new_section_path, class: "new_section" %>
+<% if Article.all.empty? %>
+  <h3>PLease create a New Section <%= link_to "Create a New section", new_section_path, class: "new_section" %></h3>
+  
 <% else %>
   <%= render 'homepage' %>
 <% end %>

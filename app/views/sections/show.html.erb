@@ -1,6 +1,5 @@
-<%= if @section.arrticles.empty? %>
-  <h3>Please create an Article</h3>
-  <%= link_to 'New Article', new_article_path %>
+<% if @section.articles.empty? %>
+  <h3>Please create an Article <%= link_to 'New Article', new_article_path %></h3>
 <% else%>
     <div class = "container" id = "category">
       <div class = "row row-no-gutters">
