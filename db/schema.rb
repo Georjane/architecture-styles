@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_15_134901) do
+ActiveRecord::Schema.define(version: 2020_10_19_084336) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -28,18 +28,6 @@ ActiveRecord::Schema.define(version: 2020_10_15_134901) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "styles", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
