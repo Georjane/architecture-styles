@@ -2,8 +2,11 @@
 
 > This is a real-world-like project, built with business specifications
 
-## Screenshot
-![]()
+## Screenshots
+![Sign Up Page](/app/assets/images/signup.png)
+![Sign Up Page](/app/assets/images/homepage.png)
+![Sign Up Page](/app/assets/images/category.png)
+![Sign Up Page](/app/assets/images/newarticle.png)
 
 ## Built With
 - Ruby v2.6.3
