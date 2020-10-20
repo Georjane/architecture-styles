@@ -2,7 +2,7 @@ class SectionsController < ApplicationController
   before_action :set_section, only: %i[show edit update destroy]
 
   def index
-    @sections = Section.all
+    @sections = Section.includes(:articles)
   end
 
   def show; end
