@@ -16,7 +16,6 @@ class SectionsController < ApplicationController
     @section.save
 
     redirect_to section_path(@section)
-    # this is the path we will use wen we click on a category
   end
 
   def destroy
@@ -31,6 +30,6 @@ class SectionsController < ApplicationController
   private
 
   def section_params
-    params.require(:section).permit(:name)
+    params.require(:section).permit(:name, :priority)
   end
 end

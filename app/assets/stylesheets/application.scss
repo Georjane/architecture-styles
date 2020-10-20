@@ -349,6 +349,7 @@ i {
   margin: 20px auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .flexright,
@@ -356,9 +357,17 @@ i {
   width: 50%;
 }
 
+.flexleft form {
+  width: 100%;
+}
+
 .logimage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#orange h3 a {
+  color: $orange;
 }

@@ -1,4 +1,4 @@
-# Ruby on Rails capstone based on lifestyle articles website. Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+## Ruby on Rails capstone based on lifestyle articles website. Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 > This is a real-world-like project, built with business specifications
 
