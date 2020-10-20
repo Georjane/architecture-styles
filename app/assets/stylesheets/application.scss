@@ -159,6 +159,11 @@ footer {
   }
 }
 
+#orange h3 a {
+  color: $orange;
+}
+
+
 #links a:hover {
   color: $orange;
   text-decoration: none;
@@ -366,8 +371,4 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#orange h3 a {
-  color: $orange;
 }
