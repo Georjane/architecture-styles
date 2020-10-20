@@ -1,11 +1,11 @@
 class SectionsController < ApplicationController
+  before_action :set_section, only: %i[show edit update destroy]
+
   def index
     @sections = Section.all
   end
 
-  def show
-    @section = Section.find(params[:id])
-  end
+  def show; end
 
   def new
     @section = Section.new
@@ -19,7 +19,6 @@ class SectionsController < ApplicationController
   end
 
   def destroy
-    @section = Section.find(params[:id])
     @section.destroy
     respond_to do |format|
       format.html { redirect_to sections_url, notice: 'section was successfully destroyed.' }
@@ -28,6 +27,10 @@ class SectionsController < ApplicationController
   end
 
   private
+
+  def set_section
+    @section = Section.find(params[:id])
+  end
 
   def section_params
     params.require(:section).permit(:name, :priority)
