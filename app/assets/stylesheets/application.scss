@@ -109,6 +109,10 @@ p {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -256,11 +260,11 @@ input {
 
 .green,
 .yellow {
-  height: 200px;
+  height: 35vh;
 }
 
 .red {
-  height: 500px;
+  height: 55vh;
 }
 
 #all-articles-con {
