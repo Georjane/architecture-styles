@@ -2,15 +2,23 @@
 
 > This is a real-world-like project, built with business specifications
 
+In this project, a simple website was built with models for user, section, article, and vote with ruby on rails.
+    A user can log in to the app, only by typing the username and is presented with a homepage that includes:
+- A Featured article that has the highest votes
+- List of all categories sorted according to their priority with an image of its most recent article
+    When the user clicks the category name they can see all articles in that category sorted according to time created
+
+ A user can write a new article using the "Write an article" link on the menu
+
 ## Screenshots
 ![Sign Up Page](/app/assets/images/signup.png)
-![Sign Up Page](/app/assets/images/homepage.png)
-![Sign Up Page](/app/assets/images/category.png)
-![Sign Up Page](/app/assets/images/newarticle.png)
+![Home Page](/app/assets/images/homepage.png)
+![Category Page](/app/assets/images/category.png)
+![New Article Page](/app/assets/images/newarticle.png)
 
 ## Built With
-- Ruby v2.6.3
-- Ruby on Rails v5.2.4.4
+- [Ruby 2.6.3](https://www.ruby-lang.org/en/news/2020/03/31/ruby-2-7-1-released/)
+- [Ruby on Rails 5.2.4.4](https://weblog.rubyonrails.org/2020/6/17/Rails-6-0-3-2-has-been-released/)
 
 ## Live Demo
 
@@ -21,25 +29,16 @@
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-- Ruby: 2.6.3
-- Rails: 5.2.4.4
-
 ### Setup
+1. Clone this repository with `git clone https://github.com/Georjane/architecture-styles.git`
 
-Install gems with:
+1. Navigate to this directory locally by typing `cd architecture-styles`
 
-```
-bundle install
-```
+1. Run `bundle install` to install all ruby dependecies
 
-Setup database with:
+1. Run `yarn` to install js dependencies
 
-```
-   rails db:create
-   rails db:migrate
-```
+1. Run `bin/rails db:migrate` to create necessary tables in database
 
 ### Usage
 
