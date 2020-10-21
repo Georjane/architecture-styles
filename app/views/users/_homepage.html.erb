@@ -4,7 +4,8 @@
       <%= image_tag highest_voted_article.image.url, height: '100%', width: '100%' %>
       <div class="position-absolute">
         <p><span><%= link_to highest_voted_article.title, highest_voted_article %></span> was voted highest with 
-        <%= highest_voted_article.votes.count %> votes</p>
+        <%= highest_voted_article.votes.count %> <%= (highest_voted_article.votes.count) == 1 ? 'vote' : 'votes'%></p>
+        
       </div>
     </div>
   </div>
