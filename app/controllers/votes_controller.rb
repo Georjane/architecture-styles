@@ -3,13 +3,22 @@ class VotesController < ApplicationController
   before_action :find_vote, only: [:destroy]
 
   def create
-    @vote = current_user.votes.create(article_id: params[:article_id]) unless already_voted?
-    redirect_to @article, notice: 'You voted this article.'
+    if !already_voted?
+      @vote = current_user.votes.create(article_id: params[:article_id])
+      redirect_to @article, notice: 'You voted this article.'
+    else
+      redirect_to @article, notice: "You can't vote this article."
+    end
+    
   end
 
   def destroy
-    @vote.destroy if already_voted?
-    redirect_to @article, notice: 'You unvoted this article.'
+    if already_voted?
+      @vote.destroy 
+      redirect_to @article, notice: 'You unvoted this article.'
+    else
+      redirect_to @article, notice: "You can't unvoted this article."
+    end
   end
 
   private
