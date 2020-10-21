@@ -1,23 +1,21 @@
     <header class="navbar navbar-inverse" id = "header">
       <div>
-        <%= link_to "Architecture", "#", id: "logo" %>
+        <%= link_to "Architecture", current_user, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right" id= "links">
-            
-            
             <% if logged_in? %>
-            <li><%= link_to "Home", current_user %></li>
-            <li><%= link_to "Write an Article", new_article_path %></li>
-           <li><%= link_to "Create New Category", new_section_path, class: "new_section" %></li>
+              <li><%= link_to "Home", current_user %></li>
+              <li><%= link_to "Write an Article", new_article_path %></li>
+              <li><%= link_to "Create New Category", new_section_path, class: "new_section" %></li>
               <li><%= link_to current_user.name, current_user %></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                  <li class="divider"></li>
-                  <li><%= link_to "Log out", logout_path, method: "delete" %> </li>
-                </ul>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to "Profile", current_user %></li>
+                    <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                    <li class="divider"></li>
+                    <li><%= link_to "Log out", logout_path, method: "delete" %> </li>
+                  </ul>
               </li>
             <% else %>
               <li><%= link_to "Have an Account already? Log in", login_path %></li>

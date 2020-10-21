@@ -32,6 +32,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  // background-color: $brown;
 }
 
 .jumbotron img {
@@ -108,6 +109,10 @@ p {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,8 +164,14 @@ footer {
   }
 }
 
-#orange h3 a {
-  color: $orange;
+.position-absolute h5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 1.1em;
+  padding: 2px;
+  background-color: $brown;
 }
 
 #links a:hover {
@@ -249,17 +260,16 @@ input {
 
 .green,
 .yellow {
-  height: 200px;
+  height: 35vh;
 }
 
 .red {
-  height: 500px;
+  height: 55vh;
 }
 
 #all-articles-con {
   padding: 0;
   margin: 0;
-  border: 10px solid $brown;
 }
 
 .row-no-gutters {
