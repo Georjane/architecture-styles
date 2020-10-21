@@ -160,6 +160,16 @@ footer {
   }
 }
 
+.position-absolute h5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 1.1em;
+  padding: 2px;
+  background-color: $brown;
+}
+
 #links a:hover {
   color: $orange;
   text-decoration: none;

@@ -11,18 +11,12 @@
   
   <div class = "row row-no-gutters">
      <% @sections.ordered_by_priority.each do |section| %>
-       <% if section.articles.empty? %>
-       <div class = "col-md-3 yellow" id="orange">
-          <div class="position-absolute">
-             <h3> <%= link_to section.name, section_path(section) %></h3>
-           </div>
-         </div>
-        <% else %>
+       <% if !section.articles.empty? %>
         <div class = "col-md-3 yellow">
-           <% myimage = section.articles.last.image %>
-           <%= image_tag myimage.url, height: '100%', width: '100%' %>
+           <%= image_tag section.articles.last.image.url, height: '100%', width: '100%' %>
            <div class="position-absolute">
-             <h3> <%= link_to section.name, section_path(section) %></h3>
+             <h5> (Category priority: <%= section.priority %>)</h5>
+             <h3> <%= link_to section.name, section_path(section) %> </h3>
            </div>
         </div>
       <% end %>
