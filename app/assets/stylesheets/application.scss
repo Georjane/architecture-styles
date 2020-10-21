@@ -32,6 +32,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  // background-color: $brown;
 }
 
 .jumbotron img {
@@ -159,10 +160,6 @@ footer {
   }
 }
 
-#orange h3 a {
-  color: $orange;
-}
-
 #links a:hover {
   color: $orange;
   text-decoration: none;
@@ -259,7 +256,6 @@ input {
 #all-articles-con {
   padding: 0;
   margin: 0;
-  border: 10px solid $brown;
 }
 
 .row-no-gutters {
