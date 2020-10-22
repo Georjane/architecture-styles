@@ -1,6 +1,7 @@
 class Section < ApplicationRecord
-  has_many :articles
-  validates :name, presence: true
+  validates :name, presence: true, length: { minimum: 6, maximum: 25 }
   validates :priority, presence: true
+  has_many :articles
+  belongs_to :user
   scope :ordered_by_priority, -> { order(priority: :asc) }
 end

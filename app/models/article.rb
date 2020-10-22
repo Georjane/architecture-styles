@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :user
   belongs_to :section
-  validates :title, presence: true, length: { maximum: 50 }
+  validates :title, presence: true, length: { minimum: 6, maximum: 50 }
   validates :body, presence: true, length: { minimum: 20 }
   validates :image, presence: true
   has_many :votes, dependent: :destroy

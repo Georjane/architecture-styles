@@ -1,5 +1,4 @@
 module SectionsHelper
-
   def display_row1_elements(articles)
     count = 1
     results = []
@@ -9,7 +8,7 @@ module SectionsHelper
     end
     results
   end
-  
+
   def display_row2_elements(articles)
     count = 1
     results = []
