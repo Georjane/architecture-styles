@@ -16,7 +16,7 @@
       </div>
      
      <div class="col-md-6">
-       <h4><%= @article.user.name %> <small><p><%= time_ago_in_words(@article.created_at) %></p><em>Posted at <%= @article.created_at %></em></small></h4>
+       <h4><small><em>Posted by </em></small><%= @article.user.name %> <small><p><%= time_ago_in_words(@article.created_at) %> ago</p></small></h4>
        <%= @article.body %>
        <div class= "size" >
        <% pre_vote = @article.votes.find { |vote| vote.user_id == current_user.id} %>

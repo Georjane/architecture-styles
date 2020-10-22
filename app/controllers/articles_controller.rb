@@ -1,34 +1,25 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
-  # GET /articles
-  # GET /articles.json
   def index
     @articles = Article.all.ordered_by_most_recent
   end
 
-  # GET /articles/1
-  # GET /articles/1.json
   def show; end
 
-  # GET /articles/new
   def new
     @article = Article.new
     @section = Section.all
   end
 
-  # GET /articles/1/edit
   def edit; end
 
-  # POST /articles
-  # POST /articles.json
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
 
     respond_to do |format|
       if @article.save
-        # redirect_to section_path
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else

@@ -144,7 +144,7 @@ footer {
 .position-absolute h3 a {
   font-weight: bolder;
   position: absolute;
-  bottom: 130px;
+  bottom: 170px;
   color: white;
   text-decoration: underline;
   text-decoration-color: #f8a745;
@@ -166,7 +166,7 @@ footer {
 
 .position-absolute h5 {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   right: 0;
   color: white;
   font-size: 1.1em;
@@ -279,11 +279,12 @@ input {
 
 #description {
   padding: 25px;
+  background-color: white;
 }
 
 .leftcol,
 .rightcol {
-  width: 24vw;
+  width: 25vw;
   height: 25vw;
 }
 

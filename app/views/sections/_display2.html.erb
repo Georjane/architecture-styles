@@ -1,0 +1,21 @@
+<div class = "col-lg-6">
+            <div class="row">
+                <div class="col-lg-6 text-justify leftcol size" id="description">
+                  <h4 id="yellow" ><strong><%= @section.name %></h4></strong>
+                  <h4><strong><%= article.title %></h4></strong>
+                  <h5><em>by <%= article.user.name %> <%= time_ago_in_words(article.created_at) %> ago</em></h5>
+                  <p class="ellipsis"><%= article.body %></p>
+
+                  <% pre_vote = article.votes.find { |vote| vote.user_id == current_user.id} %>
+                  <% if pre_vote %>
+                    <%= button_to 'Unvote', article_vote_path(article, pre_vote), method: :delete %>
+                  <% else %>
+                    <%= button_to 'vote', article_votes_path(article), method: :post %>
+                  <% end %>
+
+                  <p class="float-right">(<%= article.votes.count %> <%= (article.votes.count) == 1 ? 'vote' : 'votes'%>)</p>
+                </div>
+                <div class="col-lg-6 rightcol"><%= image_tag article.image.url, height: '100%', width: '100%' %></div>
+              </div>
+
+          </div>

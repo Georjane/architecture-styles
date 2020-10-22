@@ -16,7 +16,7 @@ class SectionsController < ApplicationController
     
     respond_to do |format|
       if @section.save
-        log_in @section
+        # log_in @section
         format.html { redirect_to @section, notice: 'section was successfully created.' }
         format.json { render :show, status: :created, location: @section }
       else
@@ -24,7 +24,6 @@ class SectionsController < ApplicationController
         format.json { render json: @section.errors, status: :unprocessable_entity }
       end
     end
-    redirect_to section_path(@section)
   end
 
   def destroy
