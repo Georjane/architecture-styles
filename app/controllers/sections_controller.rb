@@ -24,7 +24,6 @@ class SectionsController < ApplicationController
         format.json { render json: @section.errors, status: :unprocessable_entity }
       end
     end
-    redirect_to section_path(@section)
   end
 
   def destroy
