@@ -16,7 +16,7 @@ class SectionsController < ApplicationController
     
     respond_to do |format|
       if @section.save
-        log_in @section
+        # log_in @section
         format.html { redirect_to @section, notice: 'section was successfully created.' }
         format.json { render :show, status: :created, location: @section }
       else
