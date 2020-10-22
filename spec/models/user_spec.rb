@@ -11,15 +11,15 @@ RSpec.describe User, type: :model do
     it { should have_many(:articles) }
     it { should have_many(:votes) }
   end
-  
+
   describe 'Authenticated Users Activities' do
-     before do
-       @user = User.create(name: 'User1')
-     end
-     
-     it 'should be able to create a category' do
-       @section = @user.sections.new(name: 'test section', priority: 1).save
-       expect(@section).to eq(true)
-     end
+    before do
+      @user = User.create(name: 'User1')
     end
+
+    it 'should be able to create a category' do
+      @section = @user.sections.new(name: 'test section', priority: 1).save
+      expect(@section).to eq(true)
+    end
+  end
 end

@@ -54,6 +54,9 @@ Open `http://localhost:3000/` in your browser.
 
 Run the tests by running the following command
 ```
+    rspec
+```
+```
     rails test
 ```
 

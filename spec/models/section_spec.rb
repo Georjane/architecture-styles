@@ -7,5 +7,5 @@ RSpec.describe Section, type: :model do
   end
   describe 'association test' do
     it { should have_many(:articles) }
-  end  
+  end
 end
