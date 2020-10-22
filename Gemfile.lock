@@ -85,9 +85,6 @@ GEM
     execjs (2.7.0)
     factory_girl (4.9.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     faker (2.14.0)
       i18n (>= 1.6, < 2)
     ffi (1.13.1)
@@ -264,7 +261,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   database_cleaner
-  factory_girl_rails
+  factory_girl
   faker
   jbuilder (~> 2.5)
   jquery-rails

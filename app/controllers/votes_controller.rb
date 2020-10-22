@@ -9,12 +9,11 @@ class VotesController < ApplicationController
     else
       redirect_to @article, notice: "You can't vote this article."
     end
-    
   end
 
   def destroy
     if already_voted?
-      @vote.destroy 
+      @vote.destroy
       redirect_to @article, notice: 'You unvoted this article.'
     else
       redirect_to @article, notice: "You can't unvoted this article."

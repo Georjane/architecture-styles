@@ -15,8 +15,8 @@ class ArticlesController < ApplicationController
   def edit; end
 
   def create
-    @article = Article.new(article_params)
-    @article.user_id = current_user.id
+    @article = current_user.articles.build(article_params)
+    # @article.user_id = current_user.id
 
     respond_to do |format|
       if @article.save

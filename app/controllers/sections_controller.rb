@@ -12,12 +12,11 @@ class SectionsController < ApplicationController
   end
 
   def create
-    @section = Section.new(section_params)
-    
+    @section = current_user.sections.build(section_params)
+
     respond_to do |format|
       if @section.save
-        # log_in @section
-        format.html { redirect_to @section, notice: 'section was successfully created.' }
+        format.html { redirect_to @section, notice: 'Section was successfully created.' }
         format.json { render :show, status: :created, location: @section }
       else
         format.html { render :new }
