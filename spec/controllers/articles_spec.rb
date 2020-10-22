@@ -6,4 +6,8 @@ RSpec.describe ArticlesController, type: :controller do
 
     it { should have_http_status(:success) }
   end
+  describe 'GET #create' do
+    it 'returns http success' do
+    end
+  end
 end

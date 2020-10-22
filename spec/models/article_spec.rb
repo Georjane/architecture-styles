@@ -3,7 +3,10 @@ require 'rails_helper'
 RSpec.describe Article, type: :model do
   let(:user) { User.create(name: 'Jane') }
   let(:section) { user.sections.build(name: 'Section 1', priority: 1) }
-  let(:article) { user.articles.build(title: 'Article 1', body: 'This is the body of my article', section_id: section.id) }
+  let(:article) do
+    user.articles.build(title: 'Article 1', body: 'This is the body of my article',
+                        section_id: section.id)
+  end
   describe 'validation test' do
     it 'should include the :body attribute' do
       expect(article.attributes).to include('body')
