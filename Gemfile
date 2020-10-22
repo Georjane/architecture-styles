@@ -63,6 +63,7 @@ group :test do
   gem 'rspec'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
+  gem 'database_cleaner-active_record'
 end
 
 group :production do
