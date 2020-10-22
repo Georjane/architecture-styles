@@ -34,7 +34,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Navigate to this directory locally by typing `cd architecture-styles`
 
-1. Run `bundle install` to install all ruby dependecies
+1. Run `bundle install --without production` to install all ruby dependecies
 
 1. Run `yarn` to install js dependencies
 
