@@ -2,7 +2,7 @@
             <div class="row">
                 <div class="col-lg-6 text-justify leftcol size" id="description">
                   <h4 id="yellow" ><strong><%= @section.name %></h4></strong>
-                  <h4><strong><%= article.title %></h4></strong>
+                  <h4><strong><%= link_to article.title, article %></h4></strong>
                   <h5><em>by <%= article.user.name %> <%= time_ago_in_words(article.created_at) %> ago</em></h5>
                   <p class="ellipsis"><%= article.body %></p>
 
