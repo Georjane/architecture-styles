@@ -124,11 +124,6 @@ footer {
 
   a {
     color: white;
-
-    &:hover {
-      color: $orange;
-      text-decoration: none;
-      background-color: red;
     }
   }
 
@@ -147,6 +142,12 @@ a:hover {
   color: $orange;
   text-decoration: none;
   background-color: transparent;
+}
+
+footer:hover {
+  color: $orange;
+  text-decoration: none;
+  background-color: red;
 }
 
 .center {
