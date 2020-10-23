@@ -1,18 +1,13 @@
-<div class = "col-lg-6" id="full">
-              <div class="row">
-                <div class="col-lg-6 rightcol"><%= image_tag article.image.url, height: '100%', width: '100%' %></div>
-                <div class="col-lg-6 text-justify leftcol size" id="description">
-
-                  <h4 id="yellow" ><strong><%= @section.name %></h4></strong>
-                  <h4><strong><%= link_to article.title, article %></h4></strong>
-                  
-                  <h5><em>by <%= article.user.name %> <%= time_ago_in_words(article.created_at) %> ago</em></h5>
-                  <p class="ellipsis"><%= article.body %></p>
-
-                  <%= vote_btn(article) %>
-
-                  <p class="float-right">(<%= article.votes.count %> <%= (article.votes.count) == 1 ? 'vote' : 'votes'%>)</p>
-                </div>
-
-              </div>
-          </div>
+<div class = "col-md-6" id="full">
+    <div class="row toprow row-no-gutters">
+      <div  class= "col-sm-12 col-md-6 rightcol"><%= image_tag article.image.url, class:"img_preview" %></div>
+      <div class="col-sm-12 col-md-6 text-justify leftcol size" id="description">
+        <h4 id="yellow" ><strong><%= @section.name %></h4></strong>
+        <h4><strong><%= link_to article.title, article %></h4></strong>
+        <h5><em>by <%= article.user.name %> <%= time_ago_in_words(article.created_at) %> ago</em></h5>
+        <p class="ellipsis"><%= article.body %></p>
+        <%= vote_btn(article) %>
+        <p class="float-right">(<%= article.votes.count %> <%= (article.votes.count) == 1 ? 'vote' : 'votes'%>)</p>
+      </div>
+    </div>
+</div>

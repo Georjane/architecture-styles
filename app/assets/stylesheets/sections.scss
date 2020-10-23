@@ -64,7 +64,6 @@ $brown: #4d423c;
 
 .leftcol,
 .rightcol {
-  width: 25vw;
   height: 25vw;
 }
 
@@ -72,7 +71,7 @@ $brown: #4d423c;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 
@@ -102,7 +101,13 @@ $brown: #4d423c;
 
 #category .row {
   padding: 0;
-  background-color: white;
+}
+
+#category,
+#category1,
+#category2 {
+  padding: 0;
+  margin: 0;
 }
 
 .logimage {
@@ -110,4 +115,11 @@ $brown: #4d423c;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.img_preview {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
