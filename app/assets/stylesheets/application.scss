@@ -109,11 +109,6 @@ p {
   height: 40px;
 }
 
-a:hover {
-  color: $orange;
-  text-decoration: none;
-  background-color: transparent;
-}
 footer {
   position: fixed;
   bottom: 0;
@@ -146,6 +141,12 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+a:hover {
+  color: $orange;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .center {
