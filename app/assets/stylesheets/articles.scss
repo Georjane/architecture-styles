@@ -1,0 +1,54 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$orange: #f66537;
+$brown: #4d423c;
+
+.radios {
+  padding: 20px;
+  margin: 0;
+}
+
+#myarticle-title {
+  margin: 0;
+  color: $orange;
+  background-color: $brown;
+}
+
+.flexdiv {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: $brown;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexright,
+.flexleft {
+  width: 50%;
+}
+
+.flexleft form {
+  width: 100%;
+}
+
+.article-form {
+  display: flex;
+  justify-content: center;
+  background-color: $brown;
+  border-radius: 10px;
+
+  .field label {
+    font-size: 1.4em;
+  }
+
+  form {
+    background-color: #c4b3ac;
+    padding: 35px;
+    border-radius: 10px 0 0 10px;
+  }
+}

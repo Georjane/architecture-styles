@@ -1,0 +1,51 @@
+<div class="flexdiv">
+  <div class= "article-form flexleft">
+    <%= form_with(model: article, local: true, html: {multipart: true}) do |form| %>
+    <% if article.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+  
+        <ul>
+        <% article.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_area :body %>
+    </div>
+  
+  <div class="field radios">
+    <%= form.label "Choose 1 or more Sections for article" %><br />
+    <%= form.collection_check_boxes :section_ids, Section.all, :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+      
+    
+    <div class="field"> 
+      <p>
+        <%= form.label :image, "Attach an Image" %><br />
+        <%= form.file_field :image %>
+      </p>
+    </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  </div>
+  <div class="flexright">
+    <%= link_to image_tag("wfh_1.svg", alt: "Remote working image") %>
+  </div>
+</div>

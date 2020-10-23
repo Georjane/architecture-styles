@@ -1,0 +1,12 @@
+  <div class="container-fluid" id = "category">
+      <div class = "row row-no-gutters" id = "category1">
+        <% display_row1_elements(@section.articles.ordered_by_most_recent).each do |article| %>
+           <%= render partial: 'display1', locals: { article: article } %>
+        <% end %>
+      </div> 
+      <div class = "row row-no-gutters" id = "category2">
+        <% display_row2_elements(@section.articles.ordered_by_most_recent).each do |article| %>
+           <%= render partial: 'display2', locals: { article: article } %>
+        <% end %>
+      </div>
+  </div>

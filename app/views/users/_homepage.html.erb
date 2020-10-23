@@ -1,0 +1,27 @@
+<div class = "big">
+  <div class = "row row-no-gutters">
+    <div class = "col-md-12 red">
+      <%= image_tag highest_voted_article.image.url, height: '100%', width: '100%' %>
+      <div class="position-absolute">
+        <p><span><%= link_to highest_voted_article.title, highest_voted_article %></span> was voted highest with 
+        <%= highest_voted_article.votes.count %> <%= (highest_voted_article.votes.count) == 1 ? 'vote' : 'votes'%></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class = "row row-no-gutters">
+     <% @sections.ordered_by_priority.each do |section| %>
+       <% if !section.articles.empty? %>
+        <div class = "col-md-3 yellow">
+           <%= image_tag section.articles.last.image.url, height: '100%', width: '100%' %>
+           <div class="position-absolute">
+             <h5>(Category priority: <%= section.priority %>)</h5>
+             <h3> <%= link_to section.name, section_path(section) %> </h3>
+           </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div> 
+</div>
+

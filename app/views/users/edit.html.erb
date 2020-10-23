@@ -1,0 +1,18 @@
+<h1>Editing User</h1>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h3>
+        <%= gravatar_for @user %>
+        <strong></br><%= @user.name %></strong>
+      </h3>
+    </section>
+  </aside>
+</div>
+
+
+<%= render 'form', user: @user %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
