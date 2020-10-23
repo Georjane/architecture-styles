@@ -59,7 +59,7 @@ $brown: #4d423c;
 
 #description {
   padding: 25px;
-  background-color: white;
+  // background-color: white;
 }
 
 .leftcol,
@@ -83,6 +83,10 @@ $brown: #4d423c;
   padding-bottom: 2px;
 }
 
+.size {
+  width: 25vw;
+  background-color: red;
+}
 .size .button_to {
   margin-top: 10px;
   margin-bottom: 0;
