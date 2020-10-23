@@ -1,9 +1,8 @@
 class Article < ApplicationRecord
-  
   validates :title, presence: true, length: { minimum: 6, maximum: 50 }
   validates :body, presence: true, length: { minimum: 20 }
   validates :image, presence: true
-  
+
   belongs_to :user
   has_many :votes, dependent: :destroy
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
