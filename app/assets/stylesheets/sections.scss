@@ -1,3 +1,113 @@
 // Place all the styles related to the sections controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$orange: #f66537;
+$brown: #4d423c;
+
+.position-absolute h3 a {
+  font-weight: bolder;
+  position: absolute;
+  bottom: 170px;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #f8a745;
+  padding: 10px;
+}
+
+.position-absolute p {
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px;
+
+  span a {
+    color: $orange;
+    font-weight: bold;
+  }
+}
+
+.position-absolute h5 {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  color: white;
+  font-size: 1.1em;
+  padding: 2px;
+  background-color: $brown;
+}
+
+.green,
+.yellow {
+  height: 35vh;
+}
+
+.red {
+  height: 55vh;
+}
+
+#all-articles-con {
+  padding: 0;
+  margin: 0;
+}
+
+.row-no-gutters {
+  padding: 0;
+  margin: 0 !important;
+}
+
+#description {
+  padding: 25px;
+  background-color: white;
+}
+
+.leftcol,
+.rightcol {
+  width: 25vw;
+  height: 25vw;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+#yellow {
+  color: #f8a745;
+  text-decoration: underline;
+  text-decoration-color: $orange;
+  padding-bottom: 2px;
+}
+
+.size .button_to {
+  margin-top: 10px;
+  margin-bottom: 0;
+  width: 25%;
+  float: right;
+}
+
+.float-right {
+  float: left;
+  margin-top: 10px;
+}
+
+#links a:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
+#category .row {
+  padding: 0;
+  background-color: white;
+}
+
+.logimage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

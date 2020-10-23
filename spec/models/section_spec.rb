@@ -6,6 +6,6 @@ RSpec.describe Section, type: :model do
     it { should validate_presence_of(:priority) }
   end
   describe 'association test' do
-    it { should have_many(:articles) }
+    it { should have_and_belong_to_many(:articles) }
   end
 end

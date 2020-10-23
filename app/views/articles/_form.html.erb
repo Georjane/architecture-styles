@@ -23,27 +23,16 @@
       <%= form.text_area :body %>
     </div>
   
-  <div class="field">
-  <%= form.label "Area of Expertise" %><br />
-  <%= form.collection_check_boxes :section_ids, Section.all, :id, :name do |b| %>
-    <div class="collection-check-box">
-      <%= b.check_box %>
-      <%= b.label %>
-    </div>
-  <% end %>
-</div>
-  
-  
-  
-  
-    <div class="field radios">
-      <p>Choose a Section for your article</p>
-      <% Section.all.each do |section| %>
-        <%= form.check_box :section_id %> 
-        <%= form.label :section_id, section.name %>
-      <% end %>
-    </div>
-    
+  <div class="field radios">
+    <%= form.label "Choose 1 or more Sections for article" %><br />
+    <%= form.collection_check_boxes :section_ids, Section.all, :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+      
     
     <div class="field"> 
       <p>

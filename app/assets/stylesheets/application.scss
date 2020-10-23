@@ -9,7 +9,9 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ * 
+ *= require_tree .
+ *= require_self
  */
 
 @import "bootstrap-sprockets";
@@ -32,7 +34,6 @@ html {
 body {
   padding: 0;
   margin: 0;
-  // background-color: $brown;
 }
 
 .jumbotron img {
@@ -127,6 +128,7 @@ footer {
     &:hover {
       color: $orange;
       text-decoration: none;
+      background-color: red;
     }
   }
 
@@ -141,89 +143,12 @@ footer {
   }
 }
 
-.position-absolute h3 a {
-  font-weight: bolder;
-  position: absolute;
-  bottom: 170px;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: #f8a745;
-  padding: 10px;
-}
-
-.position-absolute p {
-  position: absolute;
-  bottom: 30px;
-  color: white;
-  font-size: 1.5em;
-  padding: 10px;
-
-  span a {
-    color: $orange;
-    font-weight: bold;
-  }
-}
-
-.position-absolute h5 {
-  position: absolute;
-  bottom: 50px;
-  right: 0;
-  color: white;
-  font-size: 1.1em;
-  padding: 2px;
-  background-color: $brown;
-}
-
-#links a:hover {
-  color: $orange;
-  text-decoration: none;
-}
-
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0;
-    }
-  }
-}
-
 .center {
   text-align: center;
 
   h1 {
     margin-bottom: 10px;
   }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
 }
 
 input,
@@ -243,93 +168,28 @@ input {
 
 #error_explanation {
   color: red;
+  width: 100%;
 
   ul {
     color: red;
-    margin: 0 0 30px 0;
+    margin: 0;
   }
 }
 
 .field_with_errors {
   @extend .has-error;
+  width: 100%;
+  background-color: transparent;
 
   .form-control {
     color: $state-danger-text;
   }
 }
 
-.green,
-.yellow {
-  height: 35vh;
-}
-
-.red {
-  height: 55vh;
-}
-
-#all-articles-con {
-  padding: 0;
-  margin: 0;
-}
-
-.row-no-gutters {
-  padding: 0;
-  margin: 0 !important;
-}
-
-#description {
-  padding: 25px;
-  background-color: white;
-}
-
-.leftcol,
-.rightcol {
-  width: 25vw;
-  height: 25vw;
-}
-
-.ellipsis {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-}
-
-#yellow {
-  color: #f8a745;
-  text-decoration: underline;
-  text-decoration-color: $orange;
-  padding-bottom: 2px;
-}
-
-.size .button_to {
-  margin-top: 10px;
-  margin-bottom: 0;
-  width: 25%;
-  float: right;
-}
-
-.float-right {
-  float: left;
-  margin-top: 10px;
-}
-
-.article-form {
-  display: flex;
-  justify-content: center;
-  background-color: $brown;
-  border-radius: 10px;
-
-  .field label {
-    font-size: 1.4em;
-  }
-
-  form {
-    background-color: #c4b3ac;
-    padding: 35px;
-    border-radius: 10px 0 0 10px;
-  }
+a:hover {
+  color: $orange;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 i {
@@ -338,47 +198,4 @@ i {
   &:hover {
     color: white;
   }
-}
-
-.radios {
-  padding: 20px;
-  margin: 0;
-}
-
-#myarticle-title {
-  margin: 0;
-  color: $orange;
-  background-color: $brown;
-}
-
-#category .row {
-  padding: 0;
-  background-color: white;
-}
-
-.flexdiv {
-  width: 80%;
-  height: 80%;
-  border-radius: 10px;
-  background-color: $brown;
-  margin: 20px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flexright,
-.flexleft {
-  width: 50%;
-}
-
-.flexleft form {
-  width: 100%;
-}
-
-.logimage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

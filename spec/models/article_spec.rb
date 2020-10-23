@@ -21,7 +21,7 @@ RSpec.describe Article, type: :model do
   end
 
   describe 'association test' do
-    it { should belong_to(:section) }
+    it { should have_and_belong_to_many(:sections) }
     it { should have_many(:votes) }
   end
 end
